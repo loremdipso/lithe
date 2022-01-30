@@ -1,8 +1,4 @@
 /node_modules
-/raw
-/cleaned
-/minified
-/compiled
-/gzip
+/files
 test.svelte
 temp.js

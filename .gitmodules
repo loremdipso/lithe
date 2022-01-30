@@ -1,3 +1,6 @@
 [submodule "svelte"]
 	path = svelte
 	url = git@github.com:sveltejs/svelte.git
+[submodule "test/github_batch_download"]
+	path = test/github_batch_download
+	url = git@github.com:loremdipso/github_batch_download.git
