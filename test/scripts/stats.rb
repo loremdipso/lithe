@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# Usage: ./generate_svelte_file.rb #{i}
-
 
 def main(args)
 	Dir.chdir(File.join(__dir__, '..', 'files')) do
