@@ -1,0 +1,23 @@
+{
+  "name": "lithe",
+  "version": "1.0.0",
+  "description": "Experiment. Let's try and see if we can or even should re-write the Svelte compiler in Rust.",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "install": "./scripts/install.sh",
+    "test": "./scripts/test.sh --svelte --release --debug --wasm --simple_html_parser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loremdipso/lithe.git"
+  },
+  "author": "Michael Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loremdipso/lithe/issues"
+  },
+  "homepage": "https://github.com/loremdipso/lithe#readme"
+}

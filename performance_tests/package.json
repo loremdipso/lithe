@@ -1,0 +1,52 @@
+{
+	"name": "test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "test.mjs",
+	"scripts": {
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"ffi-napi": "^4.0.3",
+		"minify": "^8.0.3",
+		"mollify": "^3.0.1",
+		"node-gyp": "^8.4.1"
+	},
+	"engines": {
+		"node": ">= 8"
+	},
+	"types": "types/runtime/index.d.ts",
+	"devDependencies": {
+		"@ampproject/remapping": "^0.3.0",
+		"@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.8.0",
+		"@types/mocha": "^7.0.0",
+		"@types/node": "^8.10.53",
+		"@typescript-eslint/eslint-plugin": "^4.31.2",
+		"@typescript-eslint/parser": "^4.31.2",
+		"acorn": "^8.4.1",
+		"agadoo": "^1.1.0",
+		"c8": "^5.0.1",
+		"code-red": "^0.2.3",
+		"codecov": "^3.5.0",
+		"css-tree": "^1.1.2",
+		"eslint": "^7.32.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-svelte3": "^3.2.1",
+		"estree-walker": "^3.0.0",
+		"is-reference": "^3.0.0",
+		"jsdom": "^15.2.1",
+		"kleur": "^3.0.3",
+		"locate-character": "^2.0.5",
+		"magic-string": "^0.25.3",
+		"mocha": "^7.0.0",
+		"periscopic": "^3.0.4",
+		"puppeteer": "^2.0.0",
+		"source-map": "^0.7.3",
+		"source-map-support": "^0.5.13",
+		"sourcemap-codec": "^1.4.8",
+		"tiny-glob": "^0.2.6",
+		"tslib": "^2.0.3",
+		"typescript": "^3.7.5"
+	}
+}
