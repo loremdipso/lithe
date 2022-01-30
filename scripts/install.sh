@@ -5,7 +5,7 @@ cd $(dirname "$0")
 cd ..
 
 echo "Pulling all submodules"
-git pull --recurse-submodules
+git submodule update --recursive
 
 echo "test: Installing dependencies"
 cd test
