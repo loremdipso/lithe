@@ -2,7 +2,7 @@
 
 def main(args)
 	Dir.chdir(File.join(__dir__, '..')) do
-		shuffled = Dir[File.join('performance_tests', 'cleaned', '*.svelte')].shuffle
+		shuffled = Dir[File.join('test', 'cleaned', '*.svelte')].shuffle
 
 		filename = shuffled[0]
 		File.open(File.join("test", "test.svelte"), "w") do |f|
