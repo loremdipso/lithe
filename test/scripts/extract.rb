@@ -2,26 +2,28 @@
 require 'fileutils'
 
 def main(args)
-	case args[0]
-	when "all"
-		extract()
-		dedup()
-		compile(false)
-		minify()
-	when "extract"
-		extract()
-	when "gzip"
-		gzip()
-	when "dedup"
-		dedup()
-	when "compile"
-		compile(false)
-	when "compile_and_minify"
-		compile(true)
-	when "minify"
-		minify()
-	else
-		usage()
+	Dir.chdir(File.join(__dir__, '..', 'files')) do
+		case args[0]
+		when "all"
+			extract()
+			dedup()
+			compile(false)
+			minify()
+		when "extract"
+			extract()
+		when "gzip"
+			gzip()
+		when "dedup"
+			dedup()
+		when "compile"
+			compile(false)
+		when "compile_and_minify"
+			compile(true)
+		when "minify"
+			minify()
+		else
+			usage()
+		end
 	end
 end
 
@@ -42,7 +44,7 @@ def compile(do_minify)
 	files = Dir["#{cleaned_dir}/**"]
 	files.each_with_index do |f,i|
 		puts "#{i+1} / #{files.size}"
-		output = `node test.mjs --only_js --show_output #{do_minify ? "--minify" : ""} --filename "#{f}"`
+		output = `node ../test.mjs --only_js --show_output #{do_minify ? "--minify" : ""} --filename "#{f}"`
 		if output.start_with?("ERROR:")
 			puts "Error: skipping"
 		else
@@ -59,7 +61,7 @@ def minify()
 	files = Dir["#{compiled_dir}/**"]
 	files.each_with_index do |f,i|
 		puts "#{i+1} / #{files.size}"
-		output = `node minify.mjs --filename "#{f}"`
+		output = `node ../minify.mjs --filename "#{f}"`
 		if output.start_with?("ERROR:")
 			puts "Error: skipping"
 		else
