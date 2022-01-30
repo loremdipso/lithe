@@ -1,2 +1,8 @@
-node_modules/
+/node_modules
+/raw
+/cleaned
+/minified
+/compiled
+/gzip
 test.svelte
+temp.js
